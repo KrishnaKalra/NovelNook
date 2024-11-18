@@ -1,0 +1,30 @@
+<%-include("background.ejs") %> 
+<% for(let i=0;i<data.length;i++){%>
+  <div class="book-info">
+    <img
+      class="book-cover"
+      src="https://covers.openlibrary.org/b/isbn/<%=data[i].isbn%>-L.jpg"
+    />
+    <div class="book-review">
+      <div class="book-title">
+        <div class="title" <% if(data[i].book_name.length>
+          20) {%> style="font-size: 60px" <%}%> >"<%=data[i].book_name%>"
+        </div>
+        <div class="sub-title">"<%=data[i].author_name%>"</div>
+      </div>
+      <p class="review">"<%=data[i].review%>"</p>
+      <p class="review-by">Review By: "<%=data[i].user_name%>"</p>
+    </div>
+    <div class="option">
+    <form class="update" action="/update-page" method="POST">
+        <input type="image" class="edit" src="edit button.png" />
+        <input type="hidden" name="id" value="<%=data[i].id%>" >
+    </form>
+    <form class="remove" action="/delete" method="POST">
+        <input type="image"  class="delete" src="delete button.png"  />
+        <input type="hidden" name="id" value="<%=data[i].id%>" >
+    </form>
+    </div>
+  </div>
+  <%}%>
+>

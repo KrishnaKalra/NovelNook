@@ -1,0 +1,44 @@
+<%-include("background.ejs")%>
+<div class="page-div">
+    <img class="displaybook" src="book.png">
+    <div class="input-box">
+        <form class="isbn-class" action="/isbn-submit" method="POST">
+            <div class="isbn-ip-container">
+                <input class="isbn-input" type="text" name="isbn" placeholder="Enter Book ISBN" value="<%=(locals.isbnnumber)?isbnnumber:""%>">
+                <input class="isbn-submit" type="image" src="submit.png" ></div>
+        </form>
+        <form class="actual-submit" action="<%=post%>" method="POST">
+            <%if(locals.bookname){%>
+            <input class="bookname" type="text" disabled value="<%=bookname%>">
+            <input type="hidden" name="book" value="<%=bookname%>">
+            <% }else{%>
+            <input class="bookname" type="text" disabled value="Name of The Book">
+            <%}%>
+            <%if(locals.bookname){%>
+                <input class="authorname" type="text" disabled value="<%=bookauthor%>">
+                <input type="hidden" name="author" value="<%=bookauthor%>">
+            <% }else{%>
+                <input class="authorname" type="text" disabled value="Name of The Author">
+            <%}%>
+            
+            <textarea class="review-input" name="book_review" placeholder="Review"  ></textarea>
+            <% if(locals.isbnnumber){%>
+            <input class="isbn-actual-input" name="isbn" value="<%=isbnnumber%>" hidden="true" >
+            <%}%>
+            <div class="black-div">
+            <input class="final-submit" type="image" src="submit.png">
+            </div>
+        </form>
+    </div>
+</div>
+<script>
+    document.querySelector(".review-input").disabled = <%=disval%>;
+    document.querySelector(".isbn-input").disabled= <%=disisbn%>;
+    document.querySelector(".isbn-submit").disabled= <%=disisbn%>;
+    let check=<%=alert%>;
+    if(check)
+    alert("Enter Valid ISBN");
+    let success=<%=success%>;
+    if(success)
+    alert("Review Saved Successfully");
+</script>

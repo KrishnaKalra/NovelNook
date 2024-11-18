@@ -1,0 +1,231 @@
+@font-face{
+    font-family:"Hangyaboly";
+    src:url("Hangyaboly.ttf");
+}
+
+html{
+    background-color:#F2F0D2;
+}
+.nav-bar{
+    display:flex;
+    height:70px;
+    justify-content: space-between;
+    align-items: center;
+}
+.logotxt{
+    text-align: center;
+    line-height: 100%;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+span{
+    vertical-align: middle;
+    font-size: 30px;
+    font-weight: 600;;
+    font-family: "Alegreya SC";
+    color:#881249;
+}
+
+.logo{
+    height:70px;
+}
+.search{
+    display: flex;
+    width: 400px;
+    justify-content: space-between;
+    align-items: center;
+}
+.burger{
+    height:60px;
+}
+.searchEnter{
+    height: 34px;
+    width:300px;
+    line-height: 34px;
+    background-color: transparent;
+    font-size: 20px;
+    color:#881249;
+    border:2px solid  #881249;
+    font-family: "Alegreya SC";
+}
+::placeholder{
+    text-align: center;
+    font-family: "Alegreya SC";
+    color:  #881249;
+    font-size: 30px;
+    line-height: 100%;
+    transform: translateY(+4px);
+
+}
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+.book-info{
+    margin-top:2%;
+    display:flex;
+    justify-content: space-between;
+    margin-bottom:100px;
+}
+.book-cover{
+    height:600px;
+    margin-left:8%;
+}
+.book-review{
+    width:45%;
+    margin-left:5%;
+}
+.book-title{
+    text-align: center;
+    font-family:"Alegreya SC";
+    color:#323232;
+}
+.title{
+    font-size: 75px;
+}
+.sub-title{
+    font-size: 20px;
+    font-family: "Encode Sans Semi Condensed";
+    font-weight: 600;
+}
+.review{
+    text-align: center;
+    font-size: 34px;
+    margin-top:5%;
+    font-family: "Lemon";
+    color:#323232;
+}
+.review-by{
+    text-align: end;
+    font-size: 20px;
+    font-family: "Lemon";
+    color:#881249;
+    margin: 0px;
+    border: 0px;
+    padding: 0px;
+}
+.page-div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.displaybook{
+    height:85vh;
+    margin-left:5vw;
+}
+.input-box{
+    width:30%;
+    border: 5px solid black;
+    height:70vh;
+    margin-right:10vw;
+}
+.isbn-class{
+    margin-top:2vh;
+}
+.isbn-submit{
+    height:60px;
+}
+.isbn-input{
+    height:40px;
+    width: 80%;
+    margin-left: 1vw;
+    background-color: transparent;
+    border:0px;
+    color:white;
+    font-size: 20px;
+    font-family: "Encode Sans Semi Condensed";
+}
+.isbn-input::placeholder  {
+    color:white;
+    font-family: "Encode Sans Semi Condensed";
+    font-size: 20px;
+    transform: translateY(-2px);
+}
+
+.isbn-ip-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #323232;
+    width: 88%;
+    margin-left:1.8vw;
+}
+textarea{
+    resize:none; 
+}
+.actual-submit{
+    margin-top:2%;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-bottom: 2%;
+    height: 83.5%;
+    align-items: center;
+}
+.review-input{
+    height:35%;
+    width:82%;
+    padding:0px;
+    border:0.90vw solid #323232;
+    background-color: #323232;
+    color:white;
+    font-size: 20px;
+    font-family: "Encode Sans Semi Condensed";
+}
+.review-input::placeholder{
+    color:white;
+    text-align: start;
+    text-indent: 15px;
+    font-size: 20px;
+    font-family: "Encode Sans Semi Condensed";
+}
+
+.bookname{
+    width:88%;
+    height:60px;
+    background-color: #323232;
+    border:0px;
+    padding: 0px;
+    color:white;
+    font-size: 20px;
+    text-indent: 25px;
+    font-family: "Encode Sans Semi Condensed";
+
+}
+.authorname{
+    width: 88%;
+    height:60px;
+    background-color: #323232;
+    border:0px;
+    padding: 0px;
+    color:white;
+    font-size: 20px;
+    text-indent: 25px;
+    font-family: "Encode Sans Semi Condensed";
+}
+.final-submit{
+    height: 60px;
+
+}
+
+.black-div{
+    background-color: #323232;
+    display: flex;
+    justify-content: end;
+    width: 88%;
+    position: relative;
+    bottom:20px;
+}
+.edit{
+    height:45px;
+}
+.delete{
+    height:45px;
+}
+.option{
+    width:45px;
+    align-self: flex-end;
+}
